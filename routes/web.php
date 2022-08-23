@@ -16,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('/lead', [\App\Http\Controllers\LeadsController::class, 'create'])->name('leads.create');
+Route::post('/lead', [\App\Http\Controllers\LeadsController::class, 'store'])->name('leads.store');
