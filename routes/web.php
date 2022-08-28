@@ -18,3 +18,4 @@ Route::get('/', function () {
 });
 Route::get('/lead', [\App\Http\Controllers\LeadsController::class, 'create'])->name('leads.create');
 Route::post('/lead', [\App\Http\Controllers\LeadsController::class, 'store'])->name('leads.store');
+Route::resource('payments', \App\Http\Controllers\PaymentsController::class);
